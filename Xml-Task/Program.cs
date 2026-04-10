@@ -12,7 +12,7 @@
 
         string id = "42014";
 
-        // create new xmlService object 
+        // call xmlService to get value of target element
         var xmlService = new XmlService();
         var target = xmlService.GetTargetValue(path, id);
 
@@ -21,6 +21,7 @@
             Console.WriteLine("Target not found.");
         }
 
+        // call fileService to write value in a file
         var fileService = new FileService();
         fileService.WriteFile(target);
     }

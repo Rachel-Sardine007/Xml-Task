@@ -11,15 +11,9 @@ public class XmlService {
         var element = doc.Descendants()
         .FirstOrDefault(e => (string)e.Attribute("id") == id);
 
-        // if (element == null)
-        // {
-        //     Console.WriteLine($"Attribut {id} target not found");
-        // }
-
         // Get target value
         var target = element?.Element("target")?.Value;
-
-        Console.WriteLine(target);
+        // Console.WriteLine(target);
 
         return target;
     }
